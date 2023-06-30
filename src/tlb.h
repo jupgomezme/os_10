@@ -1,7 +1,14 @@
 #ifndef TLB_H
 #define TLB_H
 #include "common.h"
+//Variables tipo booleanas
 #include <stdbool.h>
+/*TLB (Translation Lookaside Buffer) is a hardware cache used to speed up virtual memory translation. 
+It stores recently accessed virtual-to-physical address mappings, reducing the need to perform full 
+memory translations and improving memory access performance.
+*/
+
+//Estructura que define una entrada en el tlb (contiene parte de la tabla de paginacion para acceso rapido)
 struct tlbEntry
 {
     unsigned int pageNumber;
